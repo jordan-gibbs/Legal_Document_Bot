@@ -135,10 +135,7 @@ def main():
                             print(cost)
                         st.markdown("**If you want new questions, feel free to adjust your overview statement and re-generate.**")
                         st.markdown(response)
-                        with open(f'QFiles/{question_option} Questions.txt', 'w') as filer:
-                            filer.write(response)
-                        with open(f'QFiles/{question_option} Questions.txt') as f:
-                            st.download_button('Download Questions', f)  # Defaults to 'text/plain'
+
         else:
             st.warning('The document(s) is too long. Please input fewer docs, or split them into smaller parts.')
 
